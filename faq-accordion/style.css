@@ -1,0 +1,80 @@
+* {
+    font-family: "Work Sans", sans-serif;
+    color: hsl(292, 42%, 14%);
+}
+
+body {
+    background-image: url(background-pattern-desktop.svg);
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-color: hsl(275, 100%, 97%);
+    
+    display: flex;
+    justify-content: center;
+    
+    /* THE FIX IS HERE */
+    align-items: flex-start; /* Anchors the card to the top instead of the center */
+    padding-top: 10rem; /* Pushes the card down visually so it looks centered initially */
+    min-height: 100vh;
+}
+
+main {
+    padding: 2rem;
+    border-radius: 1rem;
+    background-color: white;
+    width: 600px;
+}
+
+hr {
+  border: 0;                
+  border-top: 0.1rcap solid hsl(275, 100%, 97%);
+}   
+
+.heading {
+    display: flex;
+    font-weight: 700;
+    box-sizing: content-box;
+    gap: 1rem;
+}
+
+#star-image {
+    width: 1.8rem;
+}
+
+.question {
+    display: flex;
+    justify-content: space-between;
+    font-weight: 600;
+}
+
+.question p:hover {
+    color: #AD28EB;
+}
+
+.hidden {
+    display: none;
+}
+
+button {
+    border: none;
+    background: none;
+}
+
+.answer {
+    color: hsl(292, 16%, 49%);
+}
+
+@media (max-width: 600px) {
+    body {
+        background-image: url(background-pattern-mobile.svg);
+        /* Adjust padding or alignment for mobile screens if needed */
+        padding: 1.5rem;
+    }
+
+    main {
+        width: 100%;
+        padding: 1.5rem;
+        font-size: 0.7rem;
+    }
+}
